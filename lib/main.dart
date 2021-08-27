@@ -48,7 +48,7 @@ class Home extends StatelessWidget {
             Neumorphic(
                 style: NeumorphicStyle(
                     shape: NeumorphicShape.concave,
-                    boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(12)),
+                    boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(5)),
                     depth: 10,
                     lightSource: LightSource.topLeft,
                     color: Colors.grey.shade300
@@ -96,6 +96,22 @@ class Home extends StatelessWidget {
                   padding: EdgeInsets.all(20),
                   child: Text('test'),
                 )
+            ),
+            NeumorphicButton(
+              child: Icon(Icons.build_circle_outlined),
+              onPressed: () => print('TESTING'),
+              style: NeumorphicStyle(
+                depth: 20,
+                intensity: .9,
+              ),
+            ),
+            NeumorphicIcon(
+              Icons.add_circle,
+              size: 80,
+              style: NeumorphicStyle(
+                depth: 10,
+                intensity: .8,
+              ),
             ),
           ],
         ),
